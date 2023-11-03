@@ -1,0 +1,58 @@
+<!-- Container -->
+<div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10">
+  
+    <!-- Registration component -->
+    <div class="flex shadow-md">
+         <!-- Registration banner -->
+      <div class="flex flex-wrap content-center justify-center rounded-r-md" style="width: 24rem; height: 32rem;">
+        <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" src="https://66.media.tumblr.com/0c13e9a01c0f97e525b66e7b0e36fc8c/tumblr_orsvoylXoA1u9ooogo1_540.gifv">
+      </div>
+  
+      <!-- Registration form -->
+      <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white" style="width: 24rem; height: 32rem;">
+        <div class="w-72">
+          <!-- Heading -->
+          <h1 class="text-xl font-semibold text-purple-800">FlavorFinder</h1>
+          <h3 class="text-xl font-semibold">Join us today..!</h3>
+          <small class="text-gray-400">Create your account by entering your details</small>
+  
+          <!-- Form -->
+          <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="mt-4">
+            <div class="mb-3">
+              <label class="mb-2 block text-xs font-semibold">Full Name</label>
+              <input type="text" formControlName="name" placeholder="Enter your full name" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+            </div>
+  
+            <div class="mb-3">
+              <label class="mb-2 block text-xs font-semibold">Email</label>
+              <input type="email" formControlName="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+            </div>
+  
+            <div class="mb-3">
+              <label class="mb-2 block text-xs font-semibold">Password</label>
+              <input type="password" formControlName="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+            </div>
+  
+            <div class="mb-3">
+              <label class="mb-2 block text-xs font-semibold">Confirm Password</label>
+              <input type="password" formControlName="cnfpassword" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+            </div>
+  
+            <div class="mb-3">
+              <button class="mb-1.5 block w-full text-center text-white bg-purple-700 hover:bg-purple-900 px-2 py-1.5 rounded-md">Register</button>
+            </div>
+          </form>
+  
+          <!-- Footer -->
+          <div class="text-center">
+            <span class="text-xs text-gray-400 font-semibold">Already have an account?</span>
+            <a routerLink="" class="text-xs font-semibold text-purple-700">Sign in</a>
+          </div>
+        </div>
+      </div>
+  
+     
+    </div>
+  
+   
+  </div>

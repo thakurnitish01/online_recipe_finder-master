@@ -1,0 +1,28 @@
+<mat-toolbar color="" class="bg-secondary">
+    <button routerLink="/dashboard" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon class="text-white">fastfood</mat-icon>
+
+    </button>
+    <span class="text-white">FlavorFinder</span>
+    <span class="example-spacer"></span>
+    <a routerLink="/dashboard">
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>home</mat-icon>
+    </button>
+  </a>
+  <a routerLink="favorite">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+  </a>
+  <a class="text-white">
+    <button mat-fab color="white"  [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button routerLink="profile" mat-menu-item>Profile<mat-icon>account_circle</mat-icon> </button>
+      <button (click)="logOut()" mat-menu-item>Logout<mat-icon>logout</mat-icon></button>
+    </mat-menu>
+  </a>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
